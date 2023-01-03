@@ -110,3 +110,13 @@ form{
   background-color: #f59794;
   color:white;
 }
+
+@media screen and (max-width:768px) {
+
+  #form{
+    width: 100%;
+  }
+  .class0, .class1, .class2, .class3, .class4{
+width: fit-content;
+  }
+}

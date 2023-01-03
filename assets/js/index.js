@@ -12,6 +12,10 @@ const savetoLocal = () => {
   if (localStorage.getItem("note")) {
     notes = JSON.parse(localStorage.getItem("note"));
   }
+
+  if(notes.length > 5 ) {
+    notes.splice(5,1)
+  } 
   notes.push(inputValue.value);
   localStorage.setItem("note", JSON.stringify(notes));
 };
