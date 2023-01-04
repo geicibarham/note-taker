@@ -1,3 +1,7 @@
+body{
+  background-color: rgba(185, 185, 216, 0.699);
+}
+
 .icon {
   width: 80px;
 }
@@ -93,8 +97,12 @@ form{
  
 }
 
-#form label {
+#form label,h1 {
   color:midnightblue;
+}
+
+h1{
+  text-align: center;
 }
 
 #form input:focus{
