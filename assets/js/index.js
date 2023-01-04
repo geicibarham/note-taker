@@ -38,7 +38,8 @@ const displayValue = () => {
       p.innerHTML = item;
 
       let img = document.createElement('img')
-      img.src=`/assets/images/${uniqueClass}.png`
+      // img.src=`/assets/images/${uniqueClass}.png`
+      img.src=`assets/images/${uniqueClass}.png`
       img.setAttribute('class', 'icon')
 
       let button = document.createElement("button");
