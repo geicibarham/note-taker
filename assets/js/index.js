@@ -13,9 +13,9 @@ const savetoLocal = () => {
     notes = JSON.parse(localStorage.getItem("note"));
   }
 
-  if(notes.length > 5 ) {
-    notes.splice(5,1)
-  } 
+  if (notes.length > 6) {
+    notes.splice(5, 1);
+  }
   notes.push(inputValue.value);
   localStorage.setItem("note", JSON.stringify(notes));
 };
@@ -28,27 +28,20 @@ const displayValue = () => {
     const arr = notesaved.map((item, index) => {
       uniqueClass = "class" + index;
 
-      
       let div = document.createElement("div");
       div.setAttribute("class", uniqueClass);
-
-  
-
       let p = document.createElement("p");
       p.innerHTML = item;
-
-      let img = document.createElement('img')
-      // img.src=`/assets/images/${uniqueClass}.png`
-      img.src=`assets/images/${uniqueClass}.png`
-      img.setAttribute('class', 'icon')
+      let img = document.createElement("img");
+      img.src = `assets/images/${uniqueClass}.png`;
+      img.alt=''
+      img.setAttribute("class", "icon");
 
       let button = document.createElement("button");
       button.innerHTML = "Delete Note";
-      button.setAttribute('class','deletebtn')
-
+      button.setAttribute("class", "deletebtn");
       div.appendChild(p);
-      
-      div.appendChild(img)
+      div.appendChild(img);
       div.appendChild(button);
       container.appendChild(div);
 
