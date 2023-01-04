@@ -29,12 +29,12 @@ const displayValue = () => {
       uniqueClass = "class" + index;
 
       let div = document.createElement("div");
-      div.setAttribute("class", uniqueClass);
+      div.classList.add(uniqueClass,'box');
       let p = document.createElement("p");
       p.innerHTML = item;
       let img = document.createElement("img");
       img.src = `assets/images/${uniqueClass}.png`;
-      img.alt=''
+      img.alt = "";
       img.setAttribute("class", "icon");
 
       let button = document.createElement("button");
@@ -45,7 +45,7 @@ const displayValue = () => {
       div.appendChild(button);
       container.appendChild(div);
 
-      const deletenote = (e) => {
+      const deletenote = () => {
         let result = notesaved.filter((item) => item !== p.innerHTML);
         localStorage.setItem("note", JSON.stringify(result));
         location.reload();
